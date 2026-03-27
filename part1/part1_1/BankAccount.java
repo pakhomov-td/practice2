@@ -45,7 +45,7 @@ public class BankAccount {
     {
         // TODO: totalAccounts++; выведите "Создание счёта #" + totalAccounts
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        totalAccounts--;
+        totalAccounts++;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
