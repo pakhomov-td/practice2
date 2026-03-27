@@ -15,9 +15,9 @@ package part4.part4_2;
  *   - == сравнивает ссылки (адреса в памяти).
  *     .equals() сравнивает содержимое.
  *   - intern() — возвращает ссылку из пула (добавляет строку в пул, если её нет).
- *   - Конкатенация литералов ("Hel" + "lo") вычисляется компилятором →
+ *   - Конкатенация литералов ("Hel" + "lo") вычисляется компилятором -
  *     результат берётся из пула.
- *   - Конкатенация с переменной выполняется в рантайме → создаётся новый объект.
+ *   - Конкатенация с переменной выполняется в рантайме - создаётся новый объект.
  *
  * Как запустить: нажмите ▶ рядом с main.
  */
@@ -27,46 +27,45 @@ public class StringPoolLab {
 
         // === Создание строк разными способами ===
 
-        String s1 = "Hello";                    // литерал → пул
-        String s2 = "Hello";                    // тот же литерал → тот же объект в пуле
-        String s3 = new String("Hello");        // new → новый объект в куче
-        String s4 = new String("Hello");        // new → ещё один новый объект
-        String s5 = s3.intern();                // intern() → ссылка из пула
-        String s6 = "Hel" + "lo";              // конкатенация литералов → компилятор → пул
+        String s1 = "Hello";                    // литерал - пул
+        String s2 = "Hello";                    // тот же литерал - тот же объект в пуле
+        String s3 = new String("Hello");        // new - новый объект в куче
+        String s4 = new String("Hello");        // new - ещё один новый объект
+        String s5 = s3.intern();                // intern() - ссылка из пула
+        String s6 = "Hel" + "lo";              // конкатенация литералов - компилятор - пул
         String half = "Hel";
-        String s7 = half + "lo";               // конкатенация с переменной → рантайм → новый объект
+        String s7 = half + "lo";               // конкатенация с переменной - рантайм - новый объект
 
         // === Сравнения ===
 
         System.out.println("=== Сравнение строк ===\n");
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: true. Причина: оба литерала ссылаются на один объект в пуле
         System.out.println("s1 == s2      : " + (s1 == s2));
         System.out.println("s1.equals(s2) : " + s1.equals(s2));
         System.out.println();
 
-        // TODO: запишите свой прогноз ПЕРЕД запуском
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: == - false (пул ≠ куча), equals() - true (содержимое одинаковое)
         System.out.println("s1 == s3      : " + (s1 == s3));
         System.out.println("s1.equals(s3) : " + s1.equals(s3));
         System.out.println();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: == - false (два разных new), equals() - true (содержимое одинаковое)
         System.out.println("s3 == s4      : " + (s3 == s4));
         System.out.println("s3.equals(s4) : " + s3.equals(s4));
         System.out.println();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: true. Причина: intern() возвращает ссылку из пула, где уже есть s1
         System.out.println("s1 == s5      : " + (s1 == s5));
         System.out.println("s1.equals(s5) : " + s1.equals(s5));
         System.out.println();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: true. Причина: "Hel"+"lo" вычисляется компилятором, результат из пула
         System.out.println("s1 == s6      : " + (s1 == s6));
         System.out.println("s1.equals(s6) : " + s1.equals(s6));
         System.out.println();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: == false (конкатенация с переменной - новый объект в куче), equals() - true
         System.out.println("s1 == s7      : " + (s1 == s7));
         System.out.println("s1.equals(s7) : " + s1.equals(s7));
         System.out.println();
@@ -78,7 +77,7 @@ public class StringPoolLab {
         sb.append('H').append('e').append('l').append('l').append('o');
         String s8 = sb.toString();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: == - false (toString() создаёт новый объект), equals() - true
         System.out.println("s1 == s8      : " + (s1 == s8));
         System.out.println("s1.equals(s8) : " + s1.equals(s8));
     }

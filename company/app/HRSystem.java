@@ -19,14 +19,14 @@ public class HRSystem {
     public static void main(String[] args) {
         Employee emp = new Employee("Иван", 30, 80000, "secret");
 
-        System.out.println(emp.name);            // Строка A
-        //System.out.println(emp.age);             // Строка B
-        //System.out.println(emp.salary);          // Строка C
-       // System.out.println(emp.password);        // Строка D
+//        System.out.println(emp.name);            // Строка A
+//        System.out.println(emp.age);             // Строка B
+//        System.out.println(emp.salary);          // Строка C
+//        System.out.println(emp.password);        // Строка D
         System.out.println(emp.getRole());       // Строка E
-       // emp.promote(5000);                       // Строка F
-       // emp.printSummary();                      // Строка G
-       // emp.validatePassword("secret");          // Строка H
+//        emp.promote(5000);                       // Строка F
+//        emp.printSummary();                      // Строка G
+//        emp.validatePassword("secret");          // Строка H
    /*
 Для каждой строки (A–H) определите: скомпилируется ли она? Если нет — укажите причину (модификатор + пакет).
 Заполните таблицу:

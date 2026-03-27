@@ -17,13 +17,12 @@
 
 Для каждой строки (A–H) из `HRSystem.java` укажите:
 
-| Строка | Обращаемый член | Модификатор | Компилируется? (да/нет) | Причина |
-|--------|----------------|-------------|:-----------------------:|---------|
-| A | `emp.name` | | | |
-| B | `emp.age` | | | |
-| C | `emp.salary` | | | |
-| D | `emp.password` | | | |
-| E | `emp.getRole()` | | | |
-| F | `emp.promote(5000)` | | | |
-| G | `emp.printSummary()` | | | |
-| H | `emp.validatePassword("secret")` | | | |
+строка    Обращаемый член                     Модификатор        Компилируется    Причина
+A          emp.name                            public             да               Доступен везде
+B          emp.age                             protected          нет              Разные пакеты, нет наследования
+C          emp.salary                          без модификатора   нет              Доступен только в пакете company.core
+D          emp.password                        private            нет              Доступен только внутри класса Employee
+E          emp.getRole()                       public             да               Доступен везде
+F          emp.promote(5000)                   protected          нет              Разные пакеты, нет наследования
+G          emp.printSummary()                  без модификатора   нет              Доступен только в пакете company.core
+H          emp.validatePassword("secret")      private            нет              Доступен только внутри класса Employee
