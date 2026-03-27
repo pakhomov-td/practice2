@@ -38,14 +38,14 @@ public class BankAccount {
     static {
         // TODO: bankName = "Java Bank"; выведите "Банковская система инициализирована"
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+        bankName = "Java Bank";
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
     {
         // TODO: totalAccounts++; выведите "Создание счёта #" + totalAccounts
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+        totalAccounts++;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
