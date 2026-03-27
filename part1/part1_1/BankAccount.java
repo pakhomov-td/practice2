@@ -86,6 +86,7 @@ public class BankAccount {
             System.out.println("Ошибка: недостаточно средств");
         } else {
             balance -= amount;
+
         }
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
